@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Consumption Calculator</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #343a40;
+    }
+    .form-group {
+      background-color: #ffffff;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    #resultado {
+      background-color: #e2e3e5;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      padding: 15px;
+      font-size: 18px;
+    }
+    .btn {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Calculadora de Consumo de Energia</h2>
+
+    <!-- Seleção de Unidade Consumidora -->
+    <div class="form-group">
+      <label for="unidadeConsumidoraSelect">Unidade Consumidora</label>
+      <select id="unidadeConsumidoraSelect" class="form-control"></select>
+    </div>
+
+    <!-- Seleção de Bandeira Tarifária -->
+    <div class="form-group">
+      <label for="bandeiraSelect">Bandeira Tarifária</label>
+      <select id="bandeiraSelect" class="form-control"></select>
+    </div>
+
+    <!-- Lista de Dispositivos -->
+    <div class="form-group">
+      <label for="listaDispositivos">Dispositivos Disponíveis</label>
+      <div id="listaDispositivos"></div>
+    </div>
+
+    <!-- Botão para buscar dispositivos -->
+    <button class="btn btn-primary" onclick="buscarDispositivosPorUnidade()">Buscar Dispositivos</button>
+
+    <!-- Botão para calcular -->
+    <button class="btn btn-success mt-2" onclick="calcularConsumo()">Calcular Consumo</button>
+
+    <!-- Resultado -->
+    <div id="resultado" class="mt-3"></div>
+  </div>
+
+  <script src="js/calcu.js"></script>
+</body>
+</html>
